@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Topup Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="form-section">
+    <h1>Pesan Panel</h1>
+    <form id="form-user">
+      <input type="text" id="username" placeholder="Masukkan Username" required />
+      <select id="ram" required>
+        <option value="">Pilih RAM</option>
+        <option value="1gb">1 GB</option>
+        <option value="2gb">2 GB</option>
+        <option value="4gb">4 GB</option>
+        <option value="unli">Unlimited</option>
+      </select>
+      <button type="submit">Lanjutkan</button>
+    </form>
+  </div>
+
+  <div class="container hidden" id="qris-section">
+    <h1>Pembayaran Panel</h1>
+    <img id="qris-img" src="" alt="QRIS" />
+    <p id="countdown">QR akan kadaluarsa dalam: 5:00</p>
+    <p id="status">Menunggu pembayaran...</p>
+    <div id="akun-panel" class="hidden"></div>
+  </div>
+
+  <div class="container">
+    <details>
+      <summary><b>Debug Log</b></summary>
+      <pre id="debug-log" style="background:#eee; padding:10px; font-size:12px; max-height:300px; overflow:auto;"></pre>
+    </details>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
